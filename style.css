@@ -1,0 +1,111 @@
+/* === Basic Page Setup === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* modern clean font */
+  background: #f8f8f8;
+  color: #333;
+  scroll-behavior: smooth;
+  text-align: center; /* center all body text */
+}
+
+/* === Header with Menu === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* menu icon left, title next */
+  background: #8dc98d; /* solid green */
+  color: white;
+  padding: 1em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin: 0 0 0 20px; /* small gap from menu icon */
+  font-weight: 600;
+}
+
+/* Hamburger menu icon */
+.menu-icon {
+  font-size: 2em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Sidebar menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(to bottom, #8dc98d, #fc9090);
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: left 0.3s ease-in-out;
+  z-index: 9;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+}
+
+.sidebar a {
+  color: white;
+  padding: 20px 30px;
+  text-decoration: none;
+  font-size: 1.3em;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.3s, transform 0.2s;
+  text-align: center; /* center link text */
+}
+
+.sidebar a:hover {
+  background: #228b22;
+  transform: scale(1.05);
+}
+
+/* Sidebar active state */
+.sidebar.active {
+  left: 0;
+}
+
+/* === Content Sections === */
+main {
+  padding: 2em;
+  max-width: 700px;
+  margin: auto;
+  text-align: center; /* center section text */
+}
+
+section {
+  background: white;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center; /* ensure section text is centered */
+}
+
+/* Remove bullets from lists */
+ul {
+  list-style: none; /* removes bullets */
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0.5em 0; /* spacing between items */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  color: #666;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* adjusts scroll target offset */
+}
